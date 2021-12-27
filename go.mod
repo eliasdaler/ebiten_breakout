@@ -1,4 +1,4 @@
-module github.com/eliasdaler/a_game_in_go
+module github.com/eliasdaler/ebiten_breakout
 
 go 1.16
 
