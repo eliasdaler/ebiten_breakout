@@ -9,7 +9,8 @@ WASM_EXEC_PATH="$(shell go env GOROOT)/misc/wasm/wasm_exec.js"
 
 itch:
 	GOOS=js GOARCH=wasm go build -o game.wasm .
-	zip -r -j site.zip game.wasm $(WASM_EXEC_PATH) html/index.html
+	zip -rj site.zip game.wasm $(WASM_EXEC_PATH)
+	cd html/; zip -r ../site.zip *
 	rm game.wasm
 
 clean:

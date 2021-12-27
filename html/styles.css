@@ -1,0 +1,61 @@
+.body-itch {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.loading-text {
+     color: white;
+     font-family: "Press Start 2P";
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100%;
+     font-size: 2em;
+}
+ @font-face {
+     font-family: "Press Start 2P";
+     src: URL('assets/pressstart2p.woff') format('woff');
+}
+ .loading-screen {
+     position: absolute;
+     height: 100%;
+     width: 100%;
+     background-color: rgb(77,170,182);
+}
+ .image-div {
+     position: absolute;
+     right: 24px;
+     bottom: 12px;
+     align-self: flex-end;
+}
+ .image {
+     height: 64px;
+     width: 64px;
+     -webkit-animation:spin 2s linear infinite;
+     -moz-animation:spin 2s linear infinite;
+     animation:spin 2s linear infinite;
+     image-rendering: -moz-crisp-edges;
+     image-rendering: -webkit-optimize-contrast;
+     image-rendering: crisp-edges;
+     image-rendering: pixelated;
+     -ms-interpolation-mode: nearest-neighbor;
+     backface-visibility: hidden;
+}
+ @-moz-keyframes spin {
+     100% {
+         -moz-transform: rotate(360deg);
+    }
+}
+ @-webkit-keyframes spin {
+     100% {
+         -webkit-transform: rotate(360deg);
+    }
+}
+ @keyframes spin {
+     100% {
+         -webkit-transform: rotate(360deg);
+         transform:rotate(360deg);
+    }
+}
