@@ -102,6 +102,7 @@ func (g *Game) Init() error {
 	}
 
 	// finally, start going
+	focus()
 	g.music.Play()
 	g.showMenu(MenuMain)
 	g.resetGame()
